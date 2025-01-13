@@ -1,17 +1,13 @@
-//
-//  GuessNumberApp.swift
-//  GuessNumber
-//
-//  Created by SHIH-YING PAN on 2025/1/13.
-//
-
 import SwiftUI
 
 @main
 struct GuessNumberApp: App {
+    @StateObject private var viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }
